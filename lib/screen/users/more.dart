@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:ten_ms/screen/users/more/blog.dart';
 import 'package:ten_ms/screen/users/more/books.dart';
 import 'package:ten_ms/screen/users/more/bookstore.dart';
@@ -83,7 +84,30 @@ class more extends StatelessWidget {
                         Get.to(devicemanager());
                       },
                       icon1: Icons.device_hub_sharp),
-                  mycard(text: "Language", url1: () {}, icon1: Icons.language),
+                  mycard(
+                    text: "Language",
+                    url1: () {
+                      void showAlartDialogue() {
+                        showDialog(
+                          barrierDismissible: false,
+                          context: context,
+                          builder: (BuildContext context) => AlertDialog(
+                            backgroundColor: Colors.amber,
+                            elevation: 8,
+                            scrollable: true,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(16),
+                              ),
+                            ),
+                          ),
+                        );
+                      }
+
+                      ;
+                    },
+                    icon1: Icons.language,
+                  ),
                   mycard(
                     text: "My Certificates",
                     url1: () {
@@ -94,7 +118,7 @@ class more extends StatelessWidget {
                   mycard(
                       text: "My Books",
                       url1: () {
-                         Get.to(books());
+                        Get.to(books());
                       },
                       icon1: Icons.book),
                   mycard(
