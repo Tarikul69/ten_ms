@@ -4,9 +4,8 @@ import 'package:ten_ms/screen/users/more/bookstore.dart';
 import 'package:ten_ms/screen/users/more/certificate.dart';
 
 class payment extends StatelessWidget {
-  payment({Key? key}) : super(key: key);
-  //final List<Widget> _tabs = [];
-  //int _currentIndex = 0;
+  const payment({Key? key}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
