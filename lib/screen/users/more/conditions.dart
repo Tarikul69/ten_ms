@@ -15,6 +15,7 @@ class _conditionsState extends State<conditions> {
       appBar: AppBar(
         title: Text("Terms & Condition"),
       ),
+      
       body: Container(),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
