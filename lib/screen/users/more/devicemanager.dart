@@ -1,8 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 
 class devicemanager extends StatelessWidget {
-  const devicemanager({Key? key}) : super(key: key);
-  Widget mycard(context) {
+  devicemanager({Key? key}) : super(key: key);
+
+  DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+  AndroidDeviceInfo? androidInfo;
+  Future<AndroidDeviceInfo> getInfo() async {
+    return await deviceInfo.androidInfo;
+  }
+
+  Widget mycard(context, String version) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 90,
@@ -18,7 +28,7 @@ class devicemanager extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text("Honor X9a 5G"),
+              Text(version),
               Text("mobile"),
             ],
           ),
@@ -34,9 +44,16 @@ class devicemanager extends StatelessWidget {
       appBar: AppBar(
         title: Text("Device Manager"),
       ),
-      body: Container(
-        child: mycard(context),
-      ),
+        body: SafeArea(
+          child: FutureBuilder<AndroidDeviceInfo>(
+            future: getInfo(),
+            builder: (context, snapshot) {
+              return Column(
+                children: [mycard(context, "${snapshot.data!.version}")],
+              );
+            },
+          ),
+        )
     );
   }
 }
