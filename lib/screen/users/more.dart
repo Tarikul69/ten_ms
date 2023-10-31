@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:ten_ms/screen/users/more/blog.dart';
 import 'package:ten_ms/screen/users/more/books.dart';
 import 'package:ten_ms/screen/users/more/bookstore.dart';

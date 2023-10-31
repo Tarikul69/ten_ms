@@ -33,7 +33,7 @@ class usershome extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Container(
-                height: MediaQuery.of(context).size.height - 65,
+                height: MediaQuery.of(context).size.height - 116,
                 child: Column(
                   children: [
                     const Card(
@@ -107,9 +107,6 @@ class usershome extends StatelessWidget {
                           );
                         },
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ), 
                   ],
                 ),
