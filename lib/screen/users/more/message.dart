@@ -6,7 +6,7 @@ class message extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Abcd"),
+        title: Text("Chat with us"),
       ),
       body: Container(
         child: Padding(
@@ -15,8 +15,8 @@ class message extends StatelessWidget {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Name',
-                  hintText: 'Enter Your Name',
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter Your Name(required)',
                 ),
               ),
               SizedBox(
@@ -24,6 +24,7 @@ class message extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
+                  border: OutlineInputBorder(),
                   labelText: 'Phone',
                   hintText: 'Enter Your Phone Number',
                 ),

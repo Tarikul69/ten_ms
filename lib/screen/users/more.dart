@@ -66,6 +66,37 @@ class _moreState extends State<more> {
                   //     Text("data"),
                   //   ],
                   // ),
+                  const Card(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Account",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontStyle: FontStyle.normal,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 270,
+                            ),
+                            InkWell(
+                              child: Text(
+                                "Logout",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontStyle: FontStyle.normal,
+                                  color: Color.fromARGB(255, 245, 88, 77),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
                   mycard(
                     text: "Personal Information",
                     url1: () {

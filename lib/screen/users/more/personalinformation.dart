@@ -18,10 +18,10 @@ class personalinformation extends StatelessWidget {
 //
 //Image Picker
 //
-  Widget picimage() {
+Widget picimage() {
     return Container(
       child: CircleAvatar(
-        radius: 40,
+        radius: 80,
         backgroundImage:
             NetworkImage("https://wallpaperaccess.com/full/2637581.jpg"),
       ),
@@ -52,7 +52,7 @@ class personalinformation extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(10.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               picimage(),
               SizedBox(
