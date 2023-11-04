@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ten_ms/components/bottom_navigation.dart';
 import 'package:ten_ms/components/indexCintroller.dart';
 import 'package:ten_ms/components/myappbar.dart';
+import 'package:ten_ms/screen/users/download.dart';
 import 'package:ten_ms/screen/users/more.dart';
 import 'package:ten_ms/screen/users/skill1.dart';
 import 'package:ten_ms/screen/users/usershome.dart';
@@ -13,6 +14,7 @@ class skill extends StatelessWidget {
     List page = [
     usershome(),
     skill1(),
+    // download(),
     more(),
    ];
 
