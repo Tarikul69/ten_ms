@@ -8,7 +8,7 @@ import 'package:ten_ms/screen/users/more/certificate.dart';
 import 'package:ten_ms/screen/users/more/changepassword.dart';
 import 'package:ten_ms/screen/users/more/conditions.dart';
 import 'package:ten_ms/screen/users/more/devicemanager.dart';
-import 'package:ten_ms/screen/users/more/hotline.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ten_ms/screen/users/more/payment.dart';
 import 'package:ten_ms/screen/users/more/personalinformation.dart';
 import 'package:ten_ms/screen/users/more/report.dart';
@@ -247,12 +247,25 @@ class _moreState extends State<more> {
                     },
                     icon1: Icons.book_outlined,
                   ),
-                  mycard(
-                      text: "Hotline (169010)",
-                      url1: () {
-                        Get.to(hotline());
-                      },
-                      icon1: Icons.phone),
+                  InkWell(
+                    onTap: () {
+                      // {
+                      //   final call = Uri.parse('tel:+91 9830268966');
+                      //   if (await canLaunchUrl(call)) {
+                      //     launchUrl(call);
+                      //   } else {
+                      //     throw 'Could not launch $call';
+                      //   }
+                      // }
+                      print("Bangladesh");
+                    },
+                    child: mycard(
+                        text: "Hotline (169010)",
+                        url1: () {
+                          // Get.to(hotline());
+                        },
+                        icon1: Icons.phone),
+                  ),
                   mycard(
                       text: "Report Problem",
                       url1: () {
@@ -260,10 +273,10 @@ class _moreState extends State<more> {
                       },
                       icon1: Icons.report_problem),
                   mycard(
-                      text: "Terms & Conditions",
-                      url1: () {
-                        Get.to(conditions());
-                      },
+                    text: "Terms & Conditions",
+                    url1: () {
+                      Get.to(conditions());
+                    },
                     icon1: Icons.pages,
                   ),
                   mycard(
