@@ -10,7 +10,8 @@ class registration extends StatelessWidget {
       decoration: InputDecoration(
           hintText: hint,
           labelText: lable,
-          border: OutlineInputBorder()),
+        border: OutlineInputBorder(),
+      ),
     );
   }
 

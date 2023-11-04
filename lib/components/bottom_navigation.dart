@@ -30,29 +30,22 @@ class _bottom_navigationState extends State<bottom_navigation> {
                 Icons.home,
                 color: Colors.black,
               ),
-              label: 'Job Job',
+              label: 'Home',
             ),
             BottomNavigationBarItem(
               //backgroundColor: Colors.black,
               icon: Icon(
-                Icons.rocket,
+                Icons.book,
                 color: Colors.black,
               ),
-              label: "Skill",
-            ),
+              label: "Course",
+            ), 
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.download,
-                color: Color.fromARGB(230, 0, 0, 0),
-              ),
-              label: "Download",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.more,
+                Icons.person,
                 color: Colors.black,
               ),
-              label: "More",
+              label: "Profile",
             ),
           ],
         ),

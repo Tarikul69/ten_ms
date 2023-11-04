@@ -41,7 +41,7 @@ class _reportState extends State<report> {
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            height: 100,
+            height: 101,
             child: const Card(
               elevation: 10,
               child: Padding(

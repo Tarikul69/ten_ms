@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ten_ms/screen/login.dart';
 import 'package:ten_ms/screen/users/more/blog.dart';
 import 'package:ten_ms/screen/users/more/books.dart';
 import 'package:ten_ms/screen/users/more/bookstore.dart';
@@ -69,31 +70,31 @@ class _moreState extends State<more> {
                   const Card(
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Account",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontStyle: FontStyle.normal,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 270,
-                            ),
-                            InkWell(
-                              child: Text(
-                                "Logout",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 245, 88, 77),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ],
-                        )
+                        // Row(
+                        //   children: [
+                        //     Text(
+                        //       "Account",
+                        //       style: TextStyle(
+                        //         fontSize: 20,
+                        //         fontStyle: FontStyle.normal,
+                        //       ),
+                        //     ),
+                        //     SizedBox(
+                        //       width: 270,
+                        //     ),
+                        //     InkWell(
+                        //       child: Text(
+                        //         "Logout",
+                        //         style: TextStyle(
+                        //           fontSize: 15,
+                        //           fontStyle: FontStyle.normal,
+                        //           color: Color.fromARGB(255, 245, 88, 77),
+                        //           fontWeight: FontWeight.bold,
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // )
                       ],
                     ),
                   ),
@@ -263,7 +264,15 @@ class _moreState extends State<more> {
                       url1: () {
                         Get.to(conditions());
                       },
-                      icon1: Icons.pages),
+                    icon1: Icons.pages,
+                  ),
+                  mycard(
+                    text: "Logout",
+                    url1: () {
+                      Get.to(login());
+                    },
+                    icon1: Icons.logout,
+                  ),
                 ],
               ),
             ],

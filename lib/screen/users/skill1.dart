@@ -104,6 +104,27 @@ class skill1 extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 180,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 10,
+                        itemBuilder: (_, i) {
+                          return SizedBox(
+                            height: 100,
+                            width: 200,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: card(
+                                  title: "Title",
+                                  img:
+                                      "https://wallpaperaccess.com/full/2637581.jpg"),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   ],
                 ),
               ),

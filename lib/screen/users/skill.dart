@@ -14,7 +14,6 @@ class skill extends StatelessWidget {
     List page = [
     usershome(),
     skill1(),
-    download(),
     more(),
    ];
 
