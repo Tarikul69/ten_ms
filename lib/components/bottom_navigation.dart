@@ -17,6 +17,9 @@ class _bottom_navigationState extends State<bottom_navigation> {
     return GetBuilder<indexController>(builder: (_) {
       return SafeArea(
         child: BottomNavigationBar(
+          selectedItemColor: Colors.blue, // Set the selected item color here
+          unselectedItemColor: Colors.grey,
+          //selectedIconTheme: IconThemeData(color: Colors.yellow),
           currentIndex: _.index,
           elevation: 0,
           // backgroundColor: const Color.fromARGB(255, 190, 186, 186),
@@ -28,7 +31,7 @@ class _bottom_navigationState extends State<bottom_navigation> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.black,
+                //color: Colors.black,
               ),
               label: 'Home',
             ),
@@ -36,14 +39,14 @@ class _bottom_navigationState extends State<bottom_navigation> {
               //backgroundColor: Colors.black,
               icon: Icon(
                 Icons.book,
-                color: Colors.black,
+                //color: Colors.black,
               ),
               label: "Course",
             ), 
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.person,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               label: "Profile",
             ),
