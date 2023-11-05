@@ -290,6 +290,7 @@ class _moreState extends State<more> {
               ),
             ],
           ),
-        ));
+      ),
+    );
   }
 }
