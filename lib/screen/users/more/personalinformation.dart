@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-
 class personalinformation extends StatefulWidget {
   const personalinformation({Key? key}) : super(key: key);
 
@@ -26,16 +25,20 @@ class _personalinformationState extends State<personalinformation> {
 //Select Image Function
   XFile? _image;
 
-  Future<void> _pickImage() async {
+  _pickImage() async {
     final ImagePicker _picker = ImagePicker();
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
 
-    if (image == null) {
-      return;
+    if (image != null) {
+      return await image.readAsBytes();
+    } else {
+      print("object");
     }
-    setState(() {
-      _image = image;
-    });
+    // setState(
+    //   () {
+    //     _image = image;
+    //   },
+    // );
   }
 
 //Image Picker UI
