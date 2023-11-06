@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-class personalinformation extends StatelessWidget {
+
+class personalinformation extends StatefulWidget {
   const personalinformation({Key? key}) : super(key: key);
+
+  @override
+  State<personalinformation> createState() => _personalinformationState();
+}
+
+class _personalinformationState extends State<personalinformation> {
   Widget mytext({
     required String hint,
     required String lable,
@@ -15,13 +23,26 @@ class personalinformation extends StatelessWidget {
     );
   }
 
-//
-//Image Picker
-//
-Widget picimage() {
+//Select Image Function
+  XFile? _image;
+
+  Future<void> _pickImage() async {
+    final ImagePicker _picker = ImagePicker();
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+
+    if (image == null) {
+      return;
+    }
+    setState(() {
+      _image = image;
+    });
+  }
+
+//Image Picker UI
+  Widget picimage() {
     return Container(
       child: CircleAvatar(
-        radius: 80,
+        radius: 70,
         backgroundImage:
             NetworkImage("https://wallpaperaccess.com/full/2637581.jpg"),
       ),
@@ -29,14 +50,12 @@ Widget picimage() {
   }
 
 //
-//Button
-//
   Widget btn(context) {
     return SizedBox(
       height: 50,
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: _pickImage,
         child: Text("Update Profile"),
       ),
     );
@@ -54,7 +73,20 @@ Widget picimage() {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              picimage(),
+              // picimage(),
+              Stack(
+                children: [
+                  picimage(),
+                  Positioned(
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.add_a_photo),
+                    ),
+                    bottom: -10,
+                    left: 90,
+                  )
+                ],
+              ),
               SizedBox(
                 height: 15,
               ),
