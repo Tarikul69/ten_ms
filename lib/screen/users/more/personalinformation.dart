@@ -53,16 +53,16 @@ class _personalinformationState extends State<personalinformation> {
   }
 
 //
-  Widget btn(context) {
-    return SizedBox(
-      height: 50,
-      width: MediaQuery.of(context).size.width,
-      child: ElevatedButton(
-        onPressed: _pickImage,
-        child: Text("Update Profile"),
-      ),
-    );
-  }
+  // Widget btn(context) {
+  //   return SizedBox(
+  //     height: 50,
+  //     width: MediaQuery.of(context).size.width,
+  //     child: ElevatedButton(
+  //       onPressed: () {},
+  //       child: Text("Update Profile"),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ class _personalinformationState extends State<personalinformation> {
                   picimage(),
                   Positioned(
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: _pickImage,
                       icon: Icon(Icons.add_a_photo),
                     ),
                     bottom: -10,
@@ -109,9 +109,17 @@ class _personalinformationState extends State<personalinformation> {
               SizedBox(
                 height: 15,
               ),
-              btn(context),
+              //btn(context),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 50,
+        width: MediaQuery.of(context).size.width,
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Text("Update Profile"),
         ),
       ),
     );
