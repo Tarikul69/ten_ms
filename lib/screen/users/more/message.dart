@@ -12,6 +12,7 @@ class message extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
                 decoration: InputDecoration(
@@ -27,6 +28,16 @@ class message extends StatelessWidget {
                   border: OutlineInputBorder(),
                   labelText: 'Phone',
                   hintText: 'Enter Your Phone Number',
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Message',
+                  hintText: 'Write your message here',
                 ),
               ),
               SizedBox(
